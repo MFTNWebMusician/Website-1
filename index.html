@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<style>
+
+		.darkMode{
+			background-color: black !important;
+			color: white !important;
+		}
+
+		.boxes{
+			width: 45%;
+			height: 300px;
+			margin: 10px;
+			transition: 0.5s;
+		}
+
+
+		.boxes:hover{
+			transform: scale(1.1);
+			background-color: #5C9ED1;
+			color: white;
+		}
+
+
+		.img{
+			border-radius: 50%;
+			background-color: #86B5D9;
+			padding: 3px ;
+		}
+
+
+		.overlay h2{
+			font-size:px;
+			padding: 0 200px ;
+		}
+
+		.overlay button{
+			width: 100px;
+			height: 50px;
+		}
+
+
+		
+		.dropdownn{
+			text-decoration: none;
+			border: 1px solid black;
+			border-radius: 5px;
+			background: gray;
+			width: 30px;
+			font-weight: bold;
+			text-align: center;
+			color: black;
+		}
+
+
+		.open{
+			display: none;
+		}
+
+
+		.open ul{
+			
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+
+		}
+
+		.open li{
+			border-bottom: 1px solid black;
+			margin-left: -20px;
+			font-size: 20px;
+			font-weight: bold;
+			color: black;
+
+		}
+
+		:target{
+			background-color: white;
+			display: flex;
+			width: 100%;
+			height: 40vh;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 10;
+		}
+
+
+
+/*	---------	*/
+
+		@media(max-width:320px){
+			.boxes{
+			width: 90%;
+			height: 300px;
+	
+		}
+		}
+
+		@media (max-width:425px){
+			*{
+				font-size: 5px;
+			}
+		}
+
+		@media (max-width:768px){
+			*{
+				font-size: 15px;
+			}
+		}
+
+		@media(max-width:1024px){
+			*{
+				font-size: 12px;
+			}
+		}
+	</style>
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+	<title></title>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-6">
+				<h1>UNIONCORP</h1>
+			</div>
+			<div class="col-6 d-flex justify-content-sm-between justify-content-end align-items-center">
+				<ul class="w-100 m-0 list-unstyled d-none d-md-flex justify-content-around">
+					<li>Home</li>
+					<li>About</li>
+					<li>Services</li>
+					<li>Work</li>
+					<li>Pricing</li>
+					<li>Blog</li>
+					<li><button id="darkModeON" class="dark-mode-toggle">Dark</button></li>
+				</ul>
+				<a href="#navopen" class="d-sm-none d-block dropdownn">V</a>
+					<div id="navopen" class="open d-sm-none">
+							<ul class="list-unstyled">
+								<li>Home</li>
+								<li>About</li>
+								<li>Services</li>
+								<li>Work</li>
+								<li>Pricing</li>
+								<li>Contact</li>
+								<li><a href="#">Close</a></li>
+							</ul>
+					</div>
+			</div>
+		</div>		
+	</div>
+
+	<!--  -->
+
+	<main>
+		<section>
+			<div class="container-fluid p-0">
+				<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+				  <div class="carousel-inner">
+				    <div class="carousel-item active position-relative w-100">
+				    	<div class="text-light position-absolute d-flex flex-column justify-content-center align-items-center overlay w-100 h-100" style="background: rgba(0, 64, 128, .4)" >
+				    		<h2 class="text-center p-0">We're Always Here To Give Financial Help</h2>
+				    		<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+				    		<button class="rounded bg-light text-primary ">Get Started</button>
+				    	</div>
+				      <img src="assets/images/img1.jpg" class="d-block w-100" alt="...">
+				    </div>
+				    <div class="carousel-item position-relative w-100">
+				    	<div class="text-light position-absolute d-flex flex-column justify-content-center align-items-center overlay w-100 h-100" style="background: rgba(0, 64, 128, .4)" >
+				    		<h2 class="text-center p-0">We're Always Here To Give Financial Help</h2>
+				    		<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+				    		<button class="rounded bg-light text-primary ">Get Started</button>
+				    	</div>
+				      <img src="assets/images/img6.jpg" class="d-block w-100" alt="...">
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</section> 
+
+		<section>
+			<div class="container-fluid">
+				 <div class="row">
+				 	<div class=" col-12 col-lg-6 p-0 d-flex justify-content-center  flex-wrap">
+				 		<div class=" p-3 d-flex flex-column justify-content-between rounded border boxes">
+				 			<img src="assets/images/budget.png" class="img" width="50">
+				 			<h3>Professional Consultants</h3>
+				 			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+				 		</div>
+				 		<div class=" p-3 d-flex flex-column justify-content-around rounded border boxes">
+				 			<img src="assets/images/budget.png" class="img" width="50">
+				 			<h3>Professional Consultants</h3>
+				 			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+				 		</div>
+				 		<div class=" p-3 d-flex flex-column justify-content-around rounded border boxes">
+				 			<img src="assets/images/budget.png" class="img" width="50">
+				 			<h3>Professional Consultants</h3>
+				 			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+				 		</div>
+				 		<div class=" p-3 d-flex flex-column justify-content-around rounded border boxes">
+				 			<img src="assets/images/budget.png" class="img" width="50">
+				 			<h3>Professional Consultants</h3>
+				 			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+				 		</div>
+				 	</div>
+				 	<div class="col-12 col-lg-6 d-flex flex-column justify-content-center ">
+				 		<div class="d-flex flex-column justify-content-around  border rounded p-3">
+				 			<div class="">
+				 				<h5>About Union Corporation</h5>
+				 			<h2 class="">More than 40M+ Trusted Our Financial&Consultation Institution</h2>
+				 			</div>
+				 			<p>
+				 				There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.<br><br>
+				 				There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+				 			</p>
+				 			<button class="border-0 bg-primary w-25 rounded text-light" style="height: 45px;">Learn-more</button>
+				 		</div>
+				 	</div>
+				 </div>
+			</div>
+		</section>
+	</main>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+	<script>
+		
+			
+
+			var darkbtn=document.getElementById('darkModeON');
+			var body=document.querySelector('body');
+			var darkmode= localStorage.getItem("darkmode");
+
+
+			let enableDarkmod=()=>{
+				body.classList.add("darkMode");
+				darkbtn.classList.remove("dark-mode-toggle");
+				localStorage.setItem("darkmode", "enabled");
+
+				darkbtn.innerHTML="Light"
+			}
+
+			let disableDarkmod=()=>{
+				body.classList.remove("darkMode");
+				darkbtn.classList.add("dark-mode-toggle");
+				localStorage.setItem("darkmode", "disabled");
+
+				darkbtn.innerHTML="Dark"
+			}
+
+
+			if(darkmode==="enabled"){
+				enableDarkmod();
+			}
+
+			darkbtn.addEventListener('click', ()=>{
+				darkmode=localStorage.getItem("darkmode")
+
+				if(darkmode==="disabled"){
+					enableDarkmod()
+
+				} else {
+					disableDarkmod()
+				}
+			})
+
+	</script>
+</body>
+</html>
